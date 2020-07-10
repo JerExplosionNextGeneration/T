@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Den Chi View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DenChiViewController" customModule="SlidableBattery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-ww-YI0" userLabel="Embedded Dark View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Battery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Are-hn-9Su">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="18x-2q-frF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="E45-Jh-1KX">
+                                        <rect key="frame" x="210" y="130" width="176" height="287"/>
+                                    </imageView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pd5-Fr-Vog">
+                                        <rect key="frame" x="123.5" y="588" width="167" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="163" id="8K2-Ri-c8E"/>
+                                            <constraint firstAttribute="height" constant="30" id="Dmo-pz-7fa"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="horizontalSliding:" destination="BYZ-38-t0r" eventType="valueChanged" id="MUe-7N-8hW"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNG-H5-8j9">
+                                        <rect key="frame" x="326.5" y="592" width="16" height="22"/>
+                                        <state key="normal" image="plus"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-Eg-2Ei">
+                                        <rect key="frame" x="71" y="592" width="16.5" height="22"/>
+                                        <state key="normal" image="minus"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph6" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-kq-NQf">
+                                        <rect key="frame" x="43" y="160.5" width="111" height="226"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kNG-H5-8j9" firstAttribute="leading" secondItem="pd5-Fr-Vog" secondAttribute="trailing" constant="38" id="4fS-TX-U92"/>
+                                    <constraint firstItem="E45-Jh-1KX" firstAttribute="width" secondItem="jkx-ww-YI0" secondAttribute="width" multiplier="0.425121" id="IvL-mk-QPY"/>
+                                    <constraint firstItem="pd5-Fr-Vog" firstAttribute="centerX" secondItem="jkx-ww-YI0" secondAttribute="centerX" id="Uh0-HX-Zt5"/>
+                                    <constraint firstItem="Are-hn-9Su" firstAttribute="leading" secondItem="jkx-ww-YI0" secondAttribute="leading" id="VhG-J9-lZh"/>
+                                    <constraint firstItem="E45-Jh-1KX" firstAttribute="height" secondItem="jkx-ww-YI0" secondAttribute="height" multiplier="0.350856" id="X5H-p5-8S8"/>
+                                    <constraint firstItem="kNG-H5-8j9" firstAttribute="centerY" secondItem="pd5-Fr-Vog" secondAttribute="centerY" id="cbd-KD-Xdr"/>
+                                    <constraint firstItem="Are-hn-9Su" firstAttribute="top" secondItem="jkx-ww-YI0" secondAttribute="top" constant="10" id="iEH-bG-cJL"/>
+                                    <constraint firstItem="pd5-Fr-Vog" firstAttribute="leading" secondItem="aTj-Eg-2Ei" secondAttribute="trailing" constant="38" id="nab-t9-FcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="E45-Jh-1KX" secondAttribute="trailing" constant="28" id="nud-Oo-qkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Are-hn-9Su" secondAttribute="trailing" id="oeV-AV-LIS"/>
+                                    <constraint firstAttribute="bottom" secondItem="pd5-Fr-Vog" secondAttribute="bottom" constant="200" id="pY6-Qf-zLU"/>
+                                    <constraint firstItem="E45-Jh-1KX" firstAttribute="top" secondItem="Are-hn-9Su" secondAttribute="bottom" constant="70" id="qE2-1r-76d"/>
+                                    <constraint firstItem="ALb-kq-NQf" firstAttribute="centerY" secondItem="E45-Jh-1KX" secondAttribute="centerY" id="qjY-mc-b1j"/>
+                                    <constraint firstItem="ALb-kq-NQf" firstAttribute="width" secondItem="E45-Jh-1KX" secondAttribute="width" multiplier="0.630682" id="rim-WW-PVO"/>
+                                    <constraint firstItem="pd5-Fr-Vog" firstAttribute="centerY" secondItem="aTj-Eg-2Ei" secondAttribute="centerY" id="sCF-Oy-SEC"/>
+                                    <constraint firstItem="ALb-kq-NQf" firstAttribute="leading" secondItem="jkx-ww-YI0" secondAttribute="leading" constant="43" id="vA3-n4-mbK"/>
+                                    <constraint firstItem="ALb-kq-NQf" firstAttribute="height" secondItem="E45-Jh-1KX" secondAttribute="height" multiplier="0.787456" id="wRO-dB-jlz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jkx-ww-YI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5w9-Mt-soT"/>
+                            <constraint firstItem="jkx-ww-YI0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ypj-KM-oDU"/>
+                            <constraint firstItem="jkx-ww-YI0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dW2-RU-ksA"/>
+                            <constraint firstItem="jkx-ww-YI0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lyL-aE-gKl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="denchiImageView" destination="E45-Jh-1KX" id="xeQ-Rv-Ihx"/>
+                        <outlet property="senDenImageView" destination="ALb-kq-NQf" id="xwj-TX-zRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282.60869565217394" y="125.22321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4" width="175" height="287"/>
+        <image name="graph6" width="158" height="226"/>
+        <image name="minus" width="16.5" height="2"/>
+        <image name="plus" width="16" height="16"/>
+    </resources>
+</document>
