@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '777.0'
+
+
+
+target "SelfGeneratedTestsBundle" do
+
+    use_frameworks!
+	
+    pod 'Nimble'
+    pod 'Quick'
+    
+end
