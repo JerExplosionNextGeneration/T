@@ -1,0 +1,7 @@
+{
+    "aps": {
+        "alert": "Renshu Push",
+        "sound": "default",
+        "badge": 3
+    }
+}
